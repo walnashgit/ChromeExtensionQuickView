@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Link Preview Extension",
+  "version": "1.0",
+  "description": "Shows a preview of links on hover with configurable delay",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "options_page": "options.html",
+  "icons": {
+    "32": "icon32.png",
+    "128": "icon128.png"
+  }
+}
